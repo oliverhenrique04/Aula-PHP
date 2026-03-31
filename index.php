@@ -1,6 +1,11 @@
 <?php
 session_start();
 
+if (!isset($_SESSION['usuario_logado'])) {
+    header("Location: login.php");
+    exit;
+}
+
 // ==========================================
 // 1. LÓGICA DO BANCO DE DADOS (Tudo no topo)
 // ==========================================
